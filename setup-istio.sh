@@ -1,5 +1,5 @@
-cd /Users/Baker/Downloads/istio-1.2.5
-gcloud container clusters create istio-test   --cluster-version latest   --num-nodes 1 --preemptible --enable-network-policy --enable-autoscaling --max-nodes=10 --min-nodes=3
+cd ~/Downloads/istio-1.2.5
+gcloud container clusters create istio-test   --cluster-version latest   --num-nodes 1 --preemptible --enable-network-policy --enable-autoscaling --max-nodes=10 --min-nodes=3 --zone us-central1
 sleep 60
 kubectl create clusterrolebinding cluster-admin-binding --clusterrole=cluster-admin --user=$(gcloud config get-value core/account)
 sleep 5
