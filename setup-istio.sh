@@ -18,3 +18,4 @@ export SECURE_INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressga
 export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
 
 curl -s http://${GATEWAY_URL}/productpage
+kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml
